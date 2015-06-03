@@ -6,9 +6,18 @@
 
 var favoriteMusic = ("I'm a big fan of Green Day, Led Zeppelin, and Ed Sheeran"); //Variable for String
 
-var familyMembers = 5; //Variable for number
+var familyMembers = [5, "I have a mom and dad, two older brothers and a little sister"]; //Variable for number
 
-var isEmployed = true; //Variable for Boolean
+var isEmployed = [true, "I work as a Magazine specialist at Books-a-Million in PA"]; //Variable for Boolean
+
+
+console.log(favoriteMusic);
+
+console.log(familyMembers);
+
+console.log(isEmployed);
+
+
 
 
 
