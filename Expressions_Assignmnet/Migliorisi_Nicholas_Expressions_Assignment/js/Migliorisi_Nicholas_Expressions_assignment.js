@@ -10,5 +10,5 @@ var mass = 100; //Determining the mass
 var density = mass / volume; //finding density
 //console.log(density);// prints it to the console
 
-alert("The density of our box is "+ density + "kg/m cubed");
+alert("The density of our box is "+ density + "kg/m cubed"); //displays answer to user
 
