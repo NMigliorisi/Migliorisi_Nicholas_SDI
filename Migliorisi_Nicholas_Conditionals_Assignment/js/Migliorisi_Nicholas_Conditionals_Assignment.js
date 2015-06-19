@@ -32,14 +32,11 @@ var sum = tic1 + tic2 + tic3;
 
 //console.log(sum);
 
-var average = sum / 3                       //Dividing the ticket price sum by the amount of tickets purchased
+var average = sum / 3;                       //Dividing the ticket price sum by the amount of tickets purchased
 
  //If the average of the tickets is  more than 95, or the sum of tickets is 300 or more they get a discount, if not they get nothing.
 
-if(average > 95 || sum > 300){
-    alert("We will discount your next ticket 10%.")
-}else{
-   alert("You are not eligible for a discount.")
-}
+(average > 95 || sum > 300) ? alert("We will discount your next ticket 10%.") : alert("You are not eligible for a discount");                                  //Deciding the availability of a discount or not.
 
-console.log(average);
+
+console.log(average + " dollars");            //Displaying the average price to the console
