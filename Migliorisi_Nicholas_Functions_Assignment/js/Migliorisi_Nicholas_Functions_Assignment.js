@@ -21,7 +21,7 @@ if(gameType == "Powerball"){          //If the user selects powerball then the l
 }
 
 
-if(gameType = "Powerball") {    //If the user picks Powerball the code arrives here to figure out the 5 random numbers
+if(gameType == "Powerball") {    //If the user picks Powerball the code arrives here to figure out the 5 random numbers
     function randomBall(min, max) {
         return Math.round(min + Math.random() * (max - min));  //Defining the minimum and maximum bounds for the game
 
@@ -53,22 +53,17 @@ if(gameType = "Powerball") {    //If the user picks Powerball the code arrives h
         pbIndex[" " + pbNumber] = true;
         pbNumbers.push(pbNumber);
     }
-
+    console.log("Your numbers are " + numbers.toString() + " and your Powerball is " + pbNumbers.toString()); //output to console
+    alert("Your numbers are " + numbers.toString() + " and your Powerball is " + pbNumbers.toString()); //sending an alert to the user
     delete index;
 
-    console.log("Your numbers are " + numbers.toString() + " and your Powerball is " + pbNumbers.toString()); //output to console
-
-}
-
-
-
-if(gameType = "Florida State Lottery") {    //If the user picks FS Lottery the code arrives here to figure out the 5 random numbers
+}else{(gameType == "Florida State Lottery")    //If the user picks FS Lottery the code arrives here to figure out the 6 random numbers
     function randomBall(min, max) {
         return Math.round(min + Math.random() * (max - min));  //Defining the minimum and maximum bounds for the game
 
     }
 
-    var index = {}, numbers = [];  //This whole block is the randomization  the top half is the bounds of 5 numbers
+    var index = {}, numbers = [];  //This whole block is the randomization  the top half is the bounds of 6 numbers
     for (var n = 1; n <= 6; n++) {
         var number;
         do {
@@ -79,8 +74,13 @@ if(gameType = "Florida State Lottery") {    //If the user picks FS Lottery the c
     }
 
     delete index;
-console.log("Your FL State Lottery numbers are " + numbers.toString());
+console.log("Your FL State Lottery numbers are " + numbers.toString()); //outputting to the console
+    alert("Your FL State Lottery numbers are " + numbers.toString());  // a=sending an alert to the user.
 }
+
+/* in a test my FL Lotto numbers are 20,48,21,43,39,25
+my powerball numbers are 34,41,24,2,28 and powerball 14
+ */
 
 
 
