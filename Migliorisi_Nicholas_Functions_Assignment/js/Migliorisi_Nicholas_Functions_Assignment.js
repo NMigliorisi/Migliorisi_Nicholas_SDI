@@ -39,14 +39,48 @@ if(gameType = "Powerball") {    //If the user picks Powerball the code arrives h
 
     delete index;
 
-    console.log("Your numbers are " + numbers.toString()); //output to console
+    function powerBall(min, max) {
+        return Math.round(min + Math.random() * (max - min));  //Defining the minimum and maximum bounds for the powerball
+
+    }
+
+    var pbIndex = {}, pbNumbers = [];  //This is where we find the powerball number, just like we found th other 5 above
+    for (var n = 1; n < 2; n++) {
+        var pbNumber;
+        do {
+            pbNumber = powerBall(1, 35);
+        } while (pbIndex.hasOwnProperty(" " + pbNumber));
+        pbIndex[" " + pbNumber] = true;
+        pbNumbers.push(pbNumber);
+    }
+
+    delete index;
+
+    console.log("Your numbers are " + numbers.toString() + " and your Powerball is " + pbNumbers.toString()); //output to console
 
 }
 
 
 
+if(gameType = "Florida State Lottery") {    //If the user picks FS Lottery the code arrives here to figure out the 5 random numbers
+    function randomBall(min, max) {
+        return Math.round(min + Math.random() * (max - min));  //Defining the minimum and maximum bounds for the game
 
+    }
 
+    var index = {}, numbers = [];  //This whole block is the randomization  the top half is the bounds of 5 numbers
+    for (var n = 1; n <= 6; n++) {
+        var number;
+        do {
+            number = randomBall(1, 53);                   //The bottom half is the range of numbers
+        } while (index.hasOwnProperty(" " + number));
+        index[" " + number] = true;
+        numbers.push(number);
+    }
+
+    delete index;
+console.log("Your FL State Lottery numbers are " + numbers.toString());
+}
 
 
 
