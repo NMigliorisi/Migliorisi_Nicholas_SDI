@@ -1,5 +1,9 @@
-/**
- * Created by NickMigs on 6/25/15.
- */
+//Nicholas Migliorisi  Functions Assignment  06/25/2015 SDI Week 4  WDDBS
 
-alert("test");
+//Powerball and Florida State Lottery
+
+
+
+
+
+
