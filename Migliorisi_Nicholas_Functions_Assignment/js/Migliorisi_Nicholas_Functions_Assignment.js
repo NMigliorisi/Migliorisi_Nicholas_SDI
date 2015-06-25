@@ -19,34 +19,32 @@ if(gameType == "Powerball"){          //If the user selects powerball then the l
         alert("Thats not a valid game. Try again!")   //If none are selected and the user says PA lottery, for example, this yells at them.
     }
 }
-if(gameType = "Powerball") {
-    var pwrStart = 1
-    var pwrEnd = 59
-    var numbers = new Array();
-    for (n = pwrStart; n <= pwrEnd; n++) {
-        numbers.push(n);
+
+
+if(gameType = "Powerball") {    //If the user picks Powerball the code arrives here to figure out the 5 random numbers
+    function randomBall(min, max) {
+        return Math.round(min + Math.random() * (max - min));  //Defining the minimum and maximum bounds for the game
+
     }
 
-    function powerNumbers() {
-        var n = this.length, m, temp;
-        if (n === 0) return false;
-        while (--n) {
-            n = Math.floor(Math.random() * ( n + 1 ));
-            temp = this[m];
-            this[n] = this[m];
-            this[m] = temp;
-        }
+    var index = {}, numbers = [];  //This whole block is the randomization  the top half is the bounds of 5 numbers
+    for (var n = 1; n <= 5; n++) {
+        var number;
+        do {
+            number = randomBall(1, 59);                   //The bottom half is the range of numbers
+        } while (index.hasOwnProperty(" " + number));
+        index[" " + number] = true;
+        numbers.push(number);
     }
 
-    Array.prototype.shuffle = powerNumbers
-    numbers.shuffle();
+    delete index;
 
-    numbers.pop();
-    numbers.pop();
-    numbers.pop();
-    numbers.pop();
-    numbers.pop();
+    console.log("Your numbers are " + numbers.toString()); //output to console
+
 }
+
+
+
 
 
 
